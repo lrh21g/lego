@@ -1,0 +1,54 @@
+{
+  "name": "lego",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "// ---------- vitest 测试 ---------": "",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "// ---------- 构建 monorepo 整个项目 ---------": "",
+    "build": "pnpm -r --filter ./packages/* run build"
+  },
+  "dependencies": {
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.25.1",
+    "@changesets/cli": "^2.27.7",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/types": "^19.0.3",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^4.0.0",
+    "@vitest/ui": "^2.0.5",
+    "cz-customizable": "^7.0.0",
+    "eslint": "^9.9.0",
+    "gulp": "^5.0.0",
+    "gulp-clean": "^0.4.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.4",
+    "stylelint": "^16.5.0",
+    "stylelint-config-recess-order": "^5.0.1",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-prettier": "^5.0.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vitest": "^2.0.4",
+    "vue-tsc": "^2.0.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.cjs"
+    }
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
