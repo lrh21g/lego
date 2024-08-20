@@ -1,0 +1,90 @@
+import { textDefaultProps } from '@/components/Lego/defaultProps'
+
+const defaultTextTemplates = [
+  {
+    text: '大标题',
+    fontSize: '30px',
+    fontWeight: 'bold',
+    tag: 'h2',
+    width: '125px',
+  },
+  {
+    text: '楷体副标题',
+    fontSize: '20px',
+    fontFamily: 'K125pxaiTi, STKaiti',
+    fontWeight: 'bold',
+    tag: 'h2',
+    width: '125px',
+  },
+  {
+    text: '正文内容',
+    fontSize: '14px',
+    tag: 'p',
+    width: '125px',
+  },
+  {
+    text: '宋体正文内容',
+    fontSize: '14px',
+    fontFamily: 'SimSun, STSong',
+    tag: 'p',
+    width: '125px',
+  },
+  {
+    text: 'Arial style',
+    fontSize: '14px',
+    fontFamily: 'Arial, sans-serif',
+    tag: 'p',
+    width: '125px',
+  },
+  {
+    text: 'Comic Sans',
+    fontSize: '14px',
+    fontFamily: 'Comic Sans MS',
+    tag: 'p',
+    width: '125px',
+  },
+  {
+    text: 'Courier New',
+    fontSize: '14px',
+    fontFamily: '"Courier New", monospace',
+    tag: 'p',
+    width: '125px',
+  },
+  {
+    text: 'Times New Roman',
+    fontSize: '14px',
+    fontFamily: '"Times New Roman", serif',
+    tag: 'p',
+    width: '125px',
+  },
+  {
+    text: '链接内容',
+    fontSize: '14px',
+    color: '#1890ff',
+    textDecoration: 'underline',
+    tag: 'p',
+    width: '125px',
+  },
+  {
+    text: '按钮内容',
+    color: '#ffffff',
+    backgroundColor: '#1890ff',
+    borderWidth: '1px',
+    borderColor: '#1890ff',
+    borderStyle: 'solid',
+    borderRadius: '2px',
+    paddingLeft: '10px',
+    paddingRight: '10px',
+    paddingTop: '5px',
+    paddingBottom: '5px',
+    width: '125px',
+    tag: 'button',
+    textAlign: 'center',
+    position: 'absolute',
+  },
+]
+
+export default defaultTextTemplates.map(template => ({
+  ...textDefaultProps,
+  ...template,
+}))
